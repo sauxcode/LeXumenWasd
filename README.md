@@ -13,7 +13,7 @@ La interfaz visual está fuertemente inspirada en las aplicaciones de mensajerí
 - **Ventana de Contexto Masiva:** Capaz de procesar el texto completo del Estatuto Orgánico en cada interacción sin cortes ni bloqueos.
 - **Historial de Conversación Continuo:** Gemini recuerda el flujo de la charla para responder de forma coherente a preguntas de seguimiento (ej. *"¿Y en qué artículo dice eso?"*).
 
-### 🎨 Interfaz y UX (Estilo WhatsApp/Telegram)
+### 🎨 Interfaz y UX (Estilo App de mensajería popular)
 - **Consultas por Voz (Manos Libres):** Integra la *Web Speech API*. Al presionar el micrófono y hablar, el bot procesa el audio y **envía la pregunta automáticamente** al terminar la frase.
 - **Barra Lateral de Historial (Sidebar):** Un panel flotante izquierdo con transiciones fluidas que lista los extractos de tus consultas previas de forma ordenada.
 - **Niveles de Accesibilidad Visual:** Popup interactivo que permite reajustar el tamaño de la tipografía del chat en tres niveles (Normal, Grande, Muy Grande) con persistencia en el dispositivo.
