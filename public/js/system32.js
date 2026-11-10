@@ -53,8 +53,8 @@ if (SpeechRecognition) {
         userInput.value = transcript;
         updateSubmitButton(); // 01.100.10 Cambia ícono a enviar al ya no estar vacío
 
-     	    // 01.100.11 En cuanto hables, lanza la consulta  sin requerir clics, como una nota de voz en whatsAPp (en una posible actualización: v.1.2): 
-	   // if (transcript.trim() !== '') {userInput.value = ''; updateSubmitButton(); processChatMessage(transcript);}
+     	// 01.100.11 En cuanto hables, lanza la consulta  sin requerir clics, como una nota de voz en whatsAPp: 
+	   if (transcript.trim() !== '') {userInput.value = ''; updateSubmitButton(); processChatMessage(transcript);}
     };
 
     recognition.onend = function() {
