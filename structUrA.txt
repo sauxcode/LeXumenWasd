@@ -1,0 +1,23 @@
+ChatBotUA/
+├── public/							# Código del Frontend (Interfaz de usuario)
+│   ├── css/
+│   │   ├── light.css				# Estilos principales del chat 
+│   │   └── theme black.txt     # Un regalito ahí
+│   ├── imgs/						# imagenes usadas en la página principal
+│   │   ├── uasdbot.png			# Perfil del bot
+│   │   ├── iChatter.png			# Logo de la plataforma
+│   │   └── errs.png  			# Esto muestra un poco de mi experiencia programando esto...
+│   ├── js/
+│   │   └── system32.js			# Lógica del chat (envío de mensajes, preguntas sugeridas)
+│   └── index.html					# Pantalla principal del chatbot (con Tailwind CSS)
+├── server/	                    # Código del Backend (Node.js + Express)
+│   ├── conex.js                # Archivo principal del servidor Express. Lógica para conectarse a la API de IA y procesar las consultas			
+│   └── data/
+│        ├── questions.txt		# Preguntas de sugerencia para hacerle al chatbot
+│        └── statute.txt        # Completo el Estatuto Orgánico procesado para comprensión del chatbot						
+│    
+├── .env.exp    					# Variables de entorno (API keys de la IA) [Recomendado si usará el mismo archivo, quitar .exp]
+├── .gitignore                  # Archivos únicos en cada máquina (node_modules, .env)
+├── package.json					# Dependencias del backend
+├── package-lock.json				# Registro minucioso de las versiones exactas de las dependencias
+└── #
