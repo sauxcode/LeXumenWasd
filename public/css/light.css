@@ -70,6 +70,7 @@ body {
     border-radius: 3px;
     overflow: hidden;
     box-shadow: var(--shadow);
+	position: relative; /* Indispensable para el posicionamiento absolute */ 
 }
 
 main {
@@ -213,7 +214,6 @@ header,
 }
 
 /* Mensajes recibidos */
-
 .A .message.receivedbot {
     background-color: var(--msg-in);
     align-self: flex-start;
@@ -673,8 +673,12 @@ header,
    ========================================================================== */
 
 .sidebar {
-    width: 280px;
+    width: 320px;
     min-width: 280px;
+
+	position: absolute; /* Lo desprendemos del flujo elástico */ 
+
+    z-index: 500; /* Por encima de la conversación */
 
     background-color: var(--sidebar-bg);
     border-right: 1px solid var(--border-color);
@@ -685,13 +689,15 @@ header,
     height: 100%;
 
     /* Animación */
-    margin-left: -280px; /* Evita dejar el espacio en blanco en el layout flexible */
+	transform: translateX(-100%); 
+    margin-left: 0 !important; 
     transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	box-shadow: 4px 0 12px rgba(0, 0, 0, 0.15); 
 }
 
 
 .sidebar.open {
-    margin-left: 0; /*     Desplaza el chat suavemente hacia la derecha */
+    transform: translateX(0); /*     Desplaza el chat suavemente hacia la derecha */
 }
 
 /* Contenido del historial */
@@ -842,3 +848,20 @@ body.dark-theme .Y:hover {
     background-color: var(--accent-color);
     color: #ffffff;
 }
+
+/* ========================================================================== 
+Capa de Superposición (Overlay) Oscura y Difuminada 
+========================================================================== */ 
+
+.sidebar-overlay { 
+	position: absolute; 
+	top: 0; left: 0; 
+	width: 100%; height: 100%; 
+	background-color: rgba(0, 0, 0, 0.4); /* Fondo oscuro semitransparente */ 
+	z-index: 450; /* Justo debajo del Sidebar (500) pero encima del Chat */ 
+
+   /* Efecto de desenfoque/difuminado en el fondo */ 
+    backdrop-filter: blur(4px); 
+	-webkit-backdrop-filter: blur(4px); /* Estado inicial oculto con transición fluida */
+	opacity: 0; visibility: hidden; transition: opacity 0.3s ease, visibility 0.3s; 
+} 
