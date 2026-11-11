@@ -4,7 +4,7 @@
   "description": "",
   "main": "conex.js",
    "scripts": {
-    "start": "node server/ conex.js"
+    "start": "node conex.js"
   },
   "keywords": [],
   "author": "",
