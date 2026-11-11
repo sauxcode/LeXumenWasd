@@ -2,9 +2,9 @@
   "name": "chatbotua",
   "version": "1.0.0",
   "description": "",
-  "main": "conex.js",
+  "main": "server/conex.js",
    "scripts": {
-    "start": "node conex.js"
+    "start": "node server/conex.js"
   },
   "keywords": [],
   "author": "",
