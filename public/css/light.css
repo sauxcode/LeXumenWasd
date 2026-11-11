@@ -1,4 +1,4 @@
-
+ 
 /* ==========================================================================
    1. CONFIGURACIÓN GENERAL Y VARIABLES DE DISEÑO
    ========================================================================== */
@@ -306,6 +306,10 @@ header,
 
     font-size: 13px;
     font-weight: 500;
+
+	/* PROPIEDADES DE CONTROL: Obligan al botón a mantenerse compacto y en una sola línea */
+    display: inline-block;
+    white-space: nowrap;
 
     cursor: pointer;
     white-space: nowrap;
