@@ -46,7 +46,7 @@ try {
     const preguntasTexto = fs.readFileSync(preguntasPath, 'utf8');
     
     // 2.3. Aqui se divide el texto por líneas y se limpian los espacios vacíos
-    preguntasSugeridas = preguntasTexto.split('\r\n')
+    preguntasSugeridas = preguntasTexto.split(/\r?\n/) //Si ocupas una máquina Windows, puedes reemplazar por: ('\r\n') o ('\n')
         .map(linea => linea.trim())
         .filter(linea => linea.length > 0);
     console.log(" (✓) La base de preguntas sugerizadas ha sido cargada exitosamente. Total: " + preguntasSugeridas.length);
