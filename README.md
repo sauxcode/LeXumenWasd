@@ -31,7 +31,7 @@ mi-proyecto/
 ├── package-lock.json      # Registro de versiones estrictas de instalación
 ├── conex.js               # Servidor Express y Orquestador de la API de Gemini
 ├── .gitignore             # Filtro de seguridad (Oculta módulos y la API Key)
-├── .env.example           # Guía de variables de entorno requeridas
+├── .env.exp               # Guía de variables de entorno requeridas
 ├── data/
 │   ├── statute.txt        # Texto completo del Estatuto Orgánico de la UASD
 │   └── questions.txt      # Preguntas sugeridas para el carrusel (una por línea)
